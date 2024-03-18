@@ -98,7 +98,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // Variable to store user's message
-const API_KEY = "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"; // Paste your API key here
+const API_KEY = " "; // Paste your API key here
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -191,13 +191,6 @@ chatbotToggler.addEventListener("click", () =>
   document.body.classList.toggle("show-chatbot")
 );
 
+ 
 
-addEventListener('fetch', (event) => {
-  event.respondWith(handleRequest(event.request));
-});
 
-async function handleRequest(request) {
-  const targetUrl ="https://minhthuanvn.github.io/WebMindXCinema"; // Thay thế bằng URL thực tế
-  const modifiedRequest = new Request(targetUrl, request);
-  return fetch(modifiedRequest);
-}
